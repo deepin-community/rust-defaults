@@ -1,0 +1,5 @@
+/usr/lib/rust-${env:RUST_VERSION}/bin/cargo	/usr/bin/cargo
+/usr/lib/rust-${env:RUST_VERSION}/share/cargo/bin/cargo	/usr/share/cargo/bin/cargo
+/usr/lib/rust-${env:RUST_VERSION}/share/cargo/scripts	/usr/share/cargo/scripts
+/usr/lib/rust-${env:RUST_VERSION}/share/zsh/vendor-completions/_cargo	/usr/share/zsh/vendor-completions/_cargo
+/usr/share/bash-completion/completions/cargo-${env:RUST_VERSION}	/usr/share/bash-completion/completions/cargo

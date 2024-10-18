@@ -1,4 +1,55 @@
-#!/usr/bin/make -f
+#! /usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# version number of the defaults package
+include /usr/share/dpkg/pkg-info.mk
+# architecture dependent variables
+include /usr/share/dpkg/architecture.mk
+
+CURRENT_VERSION := 1.81
+REQV            := (>= 1.81~)
+
+CV_RUST      := $(CURRENT_VERSION)-0.1
+PV_RUST      := $(CURRENT_VERSION)
+distribution := $(shell lsb_release -is)
+packages     := rustc libstd-rust-dev rust-gdb rust-lldb rust-doc rust-src rust-clippy rustfmt rust-all cargo cargo-doc
+
+export RUST_VERSION = $(CURRENT_VERSION)
+
+debian/substvars.local: debian/rules
+	( \
+	  echo 'version:rust=$(CV_RUST)'; \
+	  echo 'pv:rust=$(CURRENT_VERSION)'; \
+	  echo 'reqv:rust=$(REQV)'; \
+	) > debian/substvars.local
 
 %:
 	dh $@
+
+override_dh_auto_clean:
+	dh_testdir
+	dh_testroot
+	rm -f debian/control.tmp*
+	rm -f debian/substvars.*
+	dh_clean
+
+.PHONY: build
+build: build-arch build-indep
+	dh $@
+
+debian/dh_auto_build.stamp: debian/substvars.local
+	touch "$@"
+
+override_dh_auto_build-arch: debian/dh_auto_build.stamp
+override_dh_auto_build-indep: debian/dh_auto_build.stamp
+
+debian/dh_auto_install.stamp: debian/substvars.local
+	for p in $(packages); do \
+	  cp -l debian/substvars.local debian/$$p.substvars; \
+	done
+	touch "$@"
+
+override_dh_auto_install-arch: debian/dh_auto_install.stamp
+override_dh_auto_install-indep: debian/dh_auto_install.stamp
