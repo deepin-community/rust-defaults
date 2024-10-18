@@ -1,0 +1,1 @@
+/usr/lib/rust-${env:RUST_VERSION}/bin/rust-lldb /usr/bin/rust-lldb

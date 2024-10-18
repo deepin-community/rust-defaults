@@ -1,0 +1,10 @@
+/usr/lib/rust-${env:RUST_VERSION}/bin/rustc	/usr/bin/rustc
+/usr/lib/rust-${env:RUST_VERSION}/bin/rustdoc	/usr/bin/rustdoc
+/usr/lib/rust-${env:RUST_VERSION}/bin/rust-lld	/usr/bin/rust-lld
+/usr/lib/rust-${env:RUST_VERSION}/bin/rust-clang	/usr/bin/rust-clang
+/usr/lib/rust-${env:RUST_VERSION}/bin/rust-llvm-dwp	/usr/bin/rust-llvm-dwp
+/usr/lib/rust-${env:RUST_VERSION}/lib/rustlib	/usr/lib/rustlib
+/usr/lib/rust-${env:RUST_VERSION}/libexec/rust-analyzer-proc-macro-srv	/usr/libexec/rust-analyzer-proc-macro-srv
+/usr/share/rustc-${env:RUST_VERSION}	/usr/share/rustc
+/usr/share/man/man1/rustc-${env:RUST_VERSION}.1.gz	/usr/share/man/man1/rustc.1.gz
+/usr/share/man/man1/rustdoc-${env:RUST_VERSION}.1.gz	/usr/share/man/man1/rustdoc.1.gz
