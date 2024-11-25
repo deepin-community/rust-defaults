@@ -1,2 +1,0 @@
-/usr/lib/rust-${env:RUST_VERSION}/bin/rust-gdb	/usr/bin/rust-gdb
-/usr/lib/rust-${env:RUST_VERSION}/bin/rust-gdbui	/usr/bin/rust-gdbui

@@ -1,23 +1,5 @@
-rust-defaults (1.81) unstable; urgency=medium
+template-repository (1.0-1) unstable; urgency=medium
 
-  * Update to 1.81.
+  * Initial release
 
- -- Mingcong Bai <baimingcong@uniontech.com>  Fri, 18 Oct 2024 14:43:55 +0800
-
-rust-defaults (1.80.1ubuntu2) oracular; urgency=medium
-
-  * Fix cargo zsh completion. (LP: #2081266)
-
- -- Alessandro Astone <alessandro.astone@canonical.com>  Fri, 20 Sep 2024 09:22:15 +0200
-
-rust-defaults (1.80.1ubuntu1) oracular; urgency=medium
-
-  * Moving default version of Rust compiler to 1.80.1
-
- -- Zixing Liu <zixing.liu@canonical.com>  Tue, 13 Aug 2024 08:03:21 -0400
-
-rust-defaults (1.76.0ubuntu1) oracular; urgency=medium
-
-  * Initial release. (LP: #2054748)
-
- -- Zixing Liu <zixing.liu@canonical.com>  Tue, 02 Jul 2024 16:53:10 +0000
+ -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
