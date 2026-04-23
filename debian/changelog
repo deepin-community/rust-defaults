@@ -1,3 +1,9 @@
+rust-defaults (1.82) unstable; urgency=medium
+
+  * use rust 1.82
+
+ -- Chang Yang <yangchang@deepin.org>  Thu, 23 Apr 2026 14:40:15 +0800
+
 rust-defaults (1.81) unstable; urgency=medium
 
   * Update to 1.81.

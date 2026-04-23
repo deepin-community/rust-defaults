@@ -8,8 +8,8 @@ include /usr/share/dpkg/pkg-info.mk
 # architecture dependent variables
 include /usr/share/dpkg/architecture.mk
 
-CURRENT_VERSION := 1.81
-REQV            := (>= 1.81~)
+CURRENT_VERSION := 1.82
+REQV            := (>= 1.82~)
 
 CV_RUST      := $(CURRENT_VERSION)-0.1
 PV_RUST      := $(CURRENT_VERSION)
